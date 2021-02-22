@@ -1,0 +1,3 @@
+[submodule "webpr-fs-21"]
+	path = webpr-fs-21
+	url = git@github.com:WebEngineering-FHNW/webpr-fs-21.git
