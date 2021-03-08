@@ -30,6 +30,21 @@ function functionTest() {
   const doFun2 = doit2(fun1);
   console.log(doFun2(10) === 1);
   console.log(doFun2() === 1);
+
+  const x = 1;
+  // starts here
+  (() => {
+    const x = 2;
+    console.log(x);
+  })(); // IIFE
+  // ends here
+  console.log(x === 1);
+  const id = x => x;
+  const konst = x => y => x;
+  const kite = konst(id);
+  console.log(id(id) === id);
+  console.log(konst(id)(undefined) === id);
+  console.log(kite(undefined)(id) === id);
 }
 
 functionTest();
